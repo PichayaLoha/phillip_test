@@ -1,6 +1,6 @@
 # PhillipTest Project
 
-โครงการนี้ประกอบด้วยส่วน Backend ที่พัฒนาด้วย Node.js และส่วน Frontend ที่พัฒนาด้วย React.
+โครงการนี้ประกอบด้วยส่วน Backend ที่พัฒนาด้วย Node.js + Express.js ส่วน Frontend ที่พัฒนาด้วย React.js และ database จะใช้้เป็น Mysql
 
 ## โครงสร้างโปรเจกต์
 
