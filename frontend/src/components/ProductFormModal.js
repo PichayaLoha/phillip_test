@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 const ProductFormModal = ({ isOpen, onClose, onSave, initialData }) => {
+  const [date, setDate] = useState(initialData ? initialData.date : '');
   const [product, setProduct] = useState(initialData ? initialData.product_name : '');
   const [amount, setAmount] = useState(initialData ? initialData.Amount : '');
   const [unit, setUnit] = useState(initialData ? initialData.unit : '');
@@ -27,11 +28,13 @@ const ProductFormModal = ({ isOpen, onClose, onSave, initialData }) => {
       setAmount(initialData.amount);
       setUnit(initialData.unit);
       setColor(initialData.color);
+      setDate(initialData.date);
     } else {
       setProduct('');
       setAmount('');
       setUnit('');
       setColor('');
+      setDate('');
     }
     setError('');
   }, [initialData, isOpen]);
@@ -40,7 +43,7 @@ const ProductFormModal = ({ isOpen, onClose, onSave, initialData }) => {
     e.preventDefault();
     setError('');
 
-    if (!product || !amount || !unit || !color) {
+    if (!product || !amount || !unit || !color || !date) {
       setError('All fields are required.');
       return;
     }
@@ -68,6 +71,7 @@ const ProductFormModal = ({ isOpen, onClose, onSave, initialData }) => {
       amount: amount,
       unit: unit,
       color: color,
+      date: date,
     });
     onClose();
   };
@@ -81,6 +85,17 @@ const ProductFormModal = ({ isOpen, onClose, onSave, initialData }) => {
           {initialData ? 'Edit Product' : 'Add New Product'}
         </h2>
         <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-xs sm:text-sm font-bold mb-2">
+              Date:
+            </label>
+            <input
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 text-xs sm:py-2 sm:px-3 sm:text-base leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-xs sm:text-sm font-bold mb-2">
               Product Name:

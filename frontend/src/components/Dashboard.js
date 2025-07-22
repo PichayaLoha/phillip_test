@@ -143,6 +143,7 @@ const Dashboard = () => {
         <table className="min-w-full bg-white">
           <thead>
             <tr>
+              <th className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base">Date</th>
               <th className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base">Product</th>
               <th className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base">Color</th>
               <th className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base">Amount</th>
@@ -154,6 +155,7 @@ const Dashboard = () => {
           <tbody>
             {products.map((product) => (
               <tr key={product.id}>
+                <td className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base text-center">{new Date(product.date).toLocaleDateString('en-CA')}</td>
                 <td className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base text-center">{product.product_name}</td>
                 <td className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base text-center">{product.color}</td>
                 <td className="py-2 px-2 sm:px-4 border-b text-xs sm:text-base text-center">{product.amount}</td>
