@@ -1,0 +1,83 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm/
+
+# Optional REPL history
+.node_repl_history
+
+# Environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Mac
+.DS_Store
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Build artifacts
+build/
+dist/
+tmp/
+
+# Thumbnails
+.thumbnails/
+
+# OS generated files
+.DS_Store
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Other common files
+*.bak
+*.swp
+*.swo
+*.swn
+*.tmp
+*.log
+*.sublime-project
+*.sublime-workspace
+.history/
+.sass-cache/
+.project
+.settings/
+.classpath
+.c9/
+*.komodoproject
+
+# Frontend specific
+frontend/build/
+frontend/dist/
+frontend/node_modules/
+
+# Backend specific
+backend/node_modules/
